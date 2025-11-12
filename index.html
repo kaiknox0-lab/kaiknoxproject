@@ -1,203 +1,157 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>প্রফেশনাল এক পেজার</title>
-    <style>
-        /* গ্লোবাল সেটিংস */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>প্রফেশনাল পোর্টফোলিও</title>
 
-        /* হেডার হিরো */
-        header {
-            background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
-            color: white;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-        }
-        header p {
-            font-size: 1.3em;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-        }
-        header .btn {
-            background-color: #ffdd59;
-            color: #333;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 30px;
-            transition: 0.3s;
-        }
-        header .btn:hover {
-            background-color: #ffc107;
-        }
+<!-- Font Awesome Icon CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-x..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        /* ন্যাভ */
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: rgba(0,0,0,0.8);
-            padding: 10px 0;
-            text-align: center;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            color: #ffdd59;
-        }
+<style>
+    /* গ্লোবাল সেটিংস */
+    * {box-sizing: border-box; margin:0; padding:0;}
+    html {scroll-behavior: smooth;}
+    body {font-family: 'Poppins', sans-serif; line-height:1.6; color:#333;}
 
-        /* সেকশন */
-        section {
-            padding: 80px 20px;
-            min-height: 100vh;
-        }
-        section:nth-child(even) {
-            background-color: #f4f4f4;
-        }
-        section h2 {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 2.5em;
-            color: #2575fc;
-        }
-        section p {
-            max-width: 700px;
-            margin: 0 auto 30px;
-            font-size: 1.1em;
-            text-align: center;
-        }
+    /* ন্যাভ */
+    nav {
+        position: sticky; top:0; z-index:1000;
+        background: rgba(0,0,0,0.85); text-align:center; padding:12px 0;
+    }
+    nav a {color:white; text-decoration:none; margin:0 20px; font-weight:500; transition:0.3s;}
+    nav a:hover {color:#ffdd59;}
 
-        /* সার্ভিসেস কার্ড */
-        .services {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        .card {
-            background-color: white;
-            padding: 30px;
-            width: 300px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            border-radius: 15px;
-            text-align: center;
-            transition: 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-        }
-        .card h3 {
-            margin-bottom: 15px;
-            color: #2575fc;
-        }
-        .card p {
-            font-size: 1em;
-        }
+    /* হেডার হিরো */
+    header {
+        background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+        height: 100vh; display:flex; flex-direction:column;
+        justify-content:center; align-items:center; text-align:center; color:white;
+    }
+    header h1 {font-size:3.5em; margin-bottom:20px; text-shadow:2px 2px 8px rgba(0,0,0,0.6);}
+    header p {font-size:1.3em; margin-bottom:30px; text-shadow:1px 1px 5px rgba(0,0,0,0.6);}
+    .btn {background:#ffdd59; color:#333; padding:15px 30px; text-decoration:none; font-weight:bold; border-radius:30px; transition:0.3s;}
+    .btn:hover {background:#ffc107;}
 
-        /* ফুটার */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
+    /* সেকশন */
+    section {padding:80px 20px; min-height:100vh;}
+    section:nth-child(even) {background:#f4f4f4;}
+    section h2 {text-align:center; margin-bottom:50px; font-size:2.5em; color:#2575fc;}
+    section p {max-width:700px; margin:0 auto 30px; font-size:1.1em; text-align:center;}
 
-        /* রেসপন্সিভ */
-        @media(max-width: 992px) {
-            .services {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        @media(max-width: 768px) {
-            header h1 {
-                font-size: 2.5em;
-            }
-            header p {
-                font-size: 1.1em;
-            }
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-        }
-    </style>
+    /* সার্ভিসেস কার্ড */
+    .services {display:flex; justify-content:center; flex-wrap:wrap; gap:30px;}
+    .card {background:white; padding:30px; width:300px; box-shadow:0 8px 20px rgba(0,0,0,0.1); border-radius:15px; text-align:center; transition:0.3s;}
+    .card:hover {transform:translateY(-10px); box-shadow:0 12px 25px rgba(0,0,0,0.2);}
+    .card i {font-size:2.5em; color:#2575fc; margin-bottom:15px;}
+    .card h3 {margin-bottom:15px; color:#2575fc;}
+    .card p {font-size:1em;}
+
+    /* পোর্টফোলিও গ্রিড */
+    .portfolio {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; justify-items:center;}
+    .portfolio-item {position:relative; overflow:hidden; border-radius:15px;}
+    .portfolio-item img {width:100%; border-radius:15px; transition:transform 0.5s;}
+    .portfolio-item:hover img {transform:scale(1.1);}
+    .portfolio-overlay {
+        position:absolute; top:0; left:0; width:100%; height:100%;
+        background:rgba(0,0,0,0.6); display:flex; justify-content:center; align-items:center; opacity:0;
+        color:white; font-size:1.2em; transition:0.3s; border-radius:15px;
+    }
+    .portfolio-item:hover .portfolio-overlay {opacity:1;}
+
+    /* কনট্যাক্ট ফর্ম */
+    .contact-form {max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
+    .contact-form input, .contact-form textarea {
+        padding:15px; border:1px solid #ccc; border-radius:10px; font-size:1em; width:100%;
+    }
+    .contact-form button {
+        padding:15px; background:#2575fc; color:white; font-size:1em; border:none; border-radius:10px; cursor:pointer; transition:0.3s;
+    }
+    .contact-form button:hover {background:#1a5dcc;}
+
+    /* ফুটার */
+    footer {background:#333; color:white; text-align:center; padding:20px 0;}
+
+    /* রেসপন্সিভ */
+    @media(max-width:768px){
+        header h1 {font-size:2.5em;}
+        header p {font-size:1.1em;}
+        nav a {display:block; margin:10px 0;}
+    }
+</style>
 </head>
 <body>
-
-    <header id="home">
-        <h1>আমার প্রফেশনাল ওয়েবসাইট</h1>
-        <p>একটি আধুনিক এক পেজার ডিজাইন উদাহরণ</p>
-        <a href="#services" class="btn">আমাদের সেবা দেখুন</a>
-    </header>
 
     <nav>
         <a href="#home">হোম</a>
         <a href="#about">আমাদের সম্পর্কে</a>
         <a href="#services">সেবা সমূহ</a>
+        <a href="#portfolio">পোর্টফোলিও</a>
         <a href="#contact">যোগাযোগ</a>
     </nav>
 
+    <header id="home">
+        <h1>আমার প্রফেশনাল পোর্টফোলিও</h1>
+        <p>একটি আধুনিক ও আকর্ষণীয় ওয়েব ডিজাইন উদাহরণ</p>
+        <a href="#services" class="btn">আমাদের সেবা দেখুন</a>
+    </header>
+
     <section id="about">
         <h2>আমাদের সম্পর্কে</h2>
-        <p>আমরা একটি উদ্ভাবনী ওয়েব ডিজাইন ও ডেভেলপমেন্ট সংস্থা। আমাদের লক্ষ্য হলো সুন্দর, ব্যবহারবান্ধব এবং প্রফেশনাল ডিজাইন তৈরি করা।</p>
+        <p>আমরা উদ্ভাবনী ওয়েব ডিজাইন ও ডেভেলপমেন্ট সংস্থা। আমাদের লক্ষ্য হলো ব্যবহারবান্ধব, আধুনিক এবং প্রফেশনাল ডিজাইন তৈরি করা।</p>
     </section>
 
     <section id="services">
         <h2>সেবা সমূহ</h2>
         <div class="services">
             <div class="card">
+                <i class="fas fa-laptop-code"></i>
                 <h3>ওয়েব ডিজাইন</h3>
-                <p>সুন্দর এবং রেসপন্সিভ ওয়েবসাইট ডিজাইন যা ব্যবহারকারীর অভিজ্ঞতা উন্নত করে।</p>
+                <p>রেসপন্সিভ ওয়েবসাইট ডিজাইন যা ব্যবহারকারীর অভিজ্ঞতা উন্নত করে।</p>
             </div>
             <div class="card">
+                <i class="fas fa-paint-brush"></i>
                 <h3>গ্রাফিক্স ডিজাইন</h3>
-                <p>লোগো, ব্র্যান্ডিং, এবং ডিজিটাল আর্টওয়ার্ক তৈরির আধুনিক সেবা।</p>
+                <p>লোগো, ব্র্যান্ডিং, এবং ডিজিটাল আর্টওয়ার্ক।</p>
             </div>
             <div class="card">
+                <i class="fas fa-bullhorn"></i>
                 <h3>ডিজিটাল মার্কেটিং</h3>
-                <p>SEO, সোশ্যাল মিডিয়া মার্কেটিং এবং কন্টেন্ট স্ট্র্যাটেজি সহ।</p>
+                <p>SEO, সোশ্যাল মিডিয়া মার্কেটিং এবং কন্টেন্ট স্ট্র্যাটেজি।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>পোর্টফোলিও</h2>
+        <div class="portfolio">
+            <div class="portfolio-item">
+                <img src="https://source.unsplash.com/random/400x300?sig=1" alt="Project 1">
+                <div class="portfolio-overlay">প্রজেক্ট ১</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://source.unsplash.com/random/400x300?sig=2" alt="Project 2">
+                <div class="portfolio-overlay">প্রজেক্ট ২</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://source.unsplash.com/random/400x300?sig=3" alt="Project 3">
+                <div class="portfolio-overlay">প্রজেক্ট ৩</div>
             </div>
         </div>
     </section>
 
     <section id="contact">
         <h2>যোগাযোগ</h2>
-        <p>ইমেইল: example@example.com</p>
-        <p>ফোন: +880123456789</p>
+        <form class="contact-form">
+            <input type="text" placeholder="আপনার নাম" required>
+            <input type="email" placeholder="আপনার ইমেইল" required>
+            <textarea rows="5" placeholder="আপনার বার্তা" required></textarea>
+            <button type="submit">পাঠান</button>
+        </form>
     </section>
 
     <footer>
-        <p>&copy; 2025 প্রফেশনাল ওয়েবসাইট. সব অধিকার সংরক্ষিত।</p>
+        <p>&copy; 2025 প্রফেশনাল পোর্টফোলিও. সব অধিকার সংরক্ষিত।</p>
     </footer>
 
 </body>
