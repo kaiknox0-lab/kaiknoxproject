@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>মডার্ন এক পেজার</title>
+    <title>প্রফেশনাল এক পেজার</title>
     <style>
         /* গ্লোবাল সেটিংস */
         * {
@@ -12,7 +12,7 @@
             padding: 0;
         }
         html {
-            scroll-behavior: smooth; /* স্মুথ স্ক্রোলিং */
+            scroll-behavior: smooth;
         }
         body {
             font-family: 'Poppins', sans-serif;
@@ -20,22 +20,41 @@
             color: #333;
         }
 
-        /* হেডার */
+        /* হেডার হিরো */
         header {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
             color: white;
-            padding: 100px 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
         }
         header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
         }
         header p {
-            font-size: 1.2em;
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+        }
+        header .btn {
+            background-color: #ffdd59;
+            color: #333;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+        header .btn:hover {
+            background-color: #ffc107;
         }
 
-        /* ন্যাভিগেশন */
+        /* ন্যাভ */
         nav {
             position: sticky;
             top: 0;
@@ -47,7 +66,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
             font-weight: 500;
             transition: 0.3s;
         }
@@ -65,15 +84,43 @@
         }
         section h2 {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
             font-size: 2.5em;
             color: #2575fc;
         }
         section p {
             max-width: 700px;
-            margin: 0 auto;
+            margin: 0 auto 30px;
             font-size: 1.1em;
             text-align: center;
+        }
+
+        /* সার্ভিসেস কার্ড */
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .card {
+            background-color: white;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+        .card h3 {
+            margin-bottom: 15px;
+            color: #2575fc;
+        }
+        .card p {
+            font-size: 1em;
         }
 
         /* ফুটার */
@@ -85,12 +132,18 @@
         }
 
         /* রেসপন্সিভ */
+        @media(max-width: 992px) {
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
         @media(max-width: 768px) {
             header h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
-            section h2 {
-                font-size: 2em;
+            header p {
+                font-size: 1.1em;
             }
             nav a {
                 display: block;
@@ -102,8 +155,9 @@
 <body>
 
     <header id="home">
-        <h1>আমার মডার্ন ওয়েবসাইট</h1>
-        <p>একটি সুন্দর, এক পেজার ডিজাইন উদাহরণ</p>
+        <h1>আমার প্রফেশনাল ওয়েবসাইট</h1>
+        <p>একটি আধুনিক এক পেজার ডিজাইন উদাহরণ</p>
+        <a href="#services" class="btn">আমাদের সেবা দেখুন</a>
     </header>
 
     <nav>
@@ -115,12 +169,25 @@
 
     <section id="about">
         <h2>আমাদের সম্পর্কে</h2>
-        <p>আমরা একটি উদ্ভাবনী ওয়েব ডিজাইন ও ডেভেলপমেন্ট সংস্থা। আমাদের লক্ষ্য হলো সুন্দর ও ব্যবহারবান্ধব ডিজাইন তৈরি করা যা আপনার ব্যবসাকে এগিয়ে নিয়ে যাবে।</p>
+        <p>আমরা একটি উদ্ভাবনী ওয়েব ডিজাইন ও ডেভেলপমেন্ট সংস্থা। আমাদের লক্ষ্য হলো সুন্দর, ব্যবহারবান্ধব এবং প্রফেশনাল ডিজাইন তৈরি করা।</p>
     </section>
 
     <section id="services">
         <h2>সেবা সমূহ</h2>
-        <p>ওয়েব ডিজাইন, গ্রাফিক্স ডিজাইন, ডিজিটাল মার্কেটিং, এসইও এবং আরও অনেক সেবা আমরা প্রদান করি।</p>
+        <div class="services">
+            <div class="card">
+                <h3>ওয়েব ডিজাইন</h3>
+                <p>সুন্দর এবং রেসপন্সিভ ওয়েবসাইট ডিজাইন যা ব্যবহারকারীর অভিজ্ঞতা উন্নত করে।</p>
+            </div>
+            <div class="card">
+                <h3>গ্রাফিক্স ডিজাইন</h3>
+                <p>লোগো, ব্র্যান্ডিং, এবং ডিজিটাল আর্টওয়ার্ক তৈরির আধুনিক সেবা।</p>
+            </div>
+            <div class="card">
+                <h3>ডিজিটাল মার্কেটিং</h3>
+                <p>SEO, সোশ্যাল মিডিয়া মার্কেটিং এবং কন্টেন্ট স্ট্র্যাটেজি সহ।</p>
+            </div>
+        </div>
     </section>
 
     <section id="contact">
@@ -130,7 +197,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 আমার মডার্ন ওয়েবসাইট. সব অধিকার সংরক্ষিত।</p>
+        <p>&copy; 2025 প্রফেশনাল ওয়েবসাইট. সব অধিকার সংরক্ষিত।</p>
     </footer>
 
 </body>
