@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মডার্ন এক পেজার</title>
+    <style>
+        /* গ্লোবাল সেটিংস */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth; /* স্মুথ স্ক্রোলিং */
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* হেডার */
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* ন্যাভিগেশন */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0,0,0,0.8);
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #ffdd59;
+        }
+
+        /* সেকশন */
+        section {
+            padding: 80px 20px;
+            min-height: 100vh;
+        }
+        section:nth-child(even) {
+            background-color: #f4f4f4;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #2575fc;
+        }
+        section p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        /* ফুটার */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* রেসপন্সিভ */
+        @media(max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            section h2 {
+                font-size: 2em;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="home">
+        <h1>আমার মডার্ন ওয়েবসাইট</h1>
+        <p>একটি সুন্দর, এক পেজার ডিজাইন উদাহরণ</p>
+    </header>
+
+    <nav>
+        <a href="#home">হোম</a>
+        <a href="#about">আমাদের সম্পর্কে</a>
+        <a href="#services">সেবা সমূহ</a>
+        <a href="#contact">যোগাযোগ</a>
+    </nav>
+
+    <section id="about">
+        <h2>আমাদের সম্পর্কে</h2>
+        <p>আমরা একটি উদ্ভাবনী ওয়েব ডিজাইন ও ডেভেলপমেন্ট সংস্থা। আমাদের লক্ষ্য হলো সুন্দর ও ব্যবহারবান্ধব ডিজাইন তৈরি করা যা আপনার ব্যবসাকে এগিয়ে নিয়ে যাবে।</p>
+    </section>
+
+    <section id="services">
+        <h2>সেবা সমূহ</h2>
+        <p>ওয়েব ডিজাইন, গ্রাফিক্স ডিজাইন, ডিজিটাল মার্কেটিং, এসইও এবং আরও অনেক সেবা আমরা প্রদান করি।</p>
+    </section>
+
+    <section id="contact">
+        <h2>যোগাযোগ</h2>
+        <p>ইমেইল: example@example.com</p>
+        <p>ফোন: +880123456789</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 আমার মডার্ন ওয়েবসাইট. সব অধিকার সংরক্ষিত।</p>
+    </footer>
+
+</body>
+</html>
